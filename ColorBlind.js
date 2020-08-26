@@ -3,22 +3,23 @@ class ColorBlind {
     var options = {
         isStatic:true
     }
-    this.body = Bodies.rectangle(x,y,w,h,options);
+    this.x=x;
+    this.y=y;
     this.w = w;
     this.h = h;
     this.random=random(0,255);
     this.color = color(this.random,this.random,this.random) ;
-    World.add(world,this.body);
+    
   }
   display() {
-      var pos = this.body.position;
+      
       rectMode(CENTER);
       fill(this.color);
-      rect(pos.x,pos.y,this.w,this.h);
+      rect(this.x,this.y,this.w,this.h);
       fill("black");
       stroke("black");
       textSize(30);
-      text("ColorBlind",pos.x-70,pos.y-200);
+      text("ColorBlind",this.x-70,this.y-200);
   }
 
 };

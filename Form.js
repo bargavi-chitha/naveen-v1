@@ -29,8 +29,7 @@ class Form {
         this.input.hide();
         this.button.hide();
         gameState+=1;
-        this.greeting.html("Hello " + "bargavi");
-        this.greeting.position(displayWidth/2 - 70, displayHeight/4);
+        
       });
       
     }
